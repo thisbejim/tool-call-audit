@@ -40,7 +40,8 @@ record 1: provider=responses calls=1
 findings:
   ERROR   CALL_ID_MISSING record 1 $.output[0] (call 1) — Responses function calls must include call_id
   ERROR   ARGUMENTS_SCHEMA_MISMATCH record 1 $.output[0].arguments["city"] (call 1) — value must have JSON type 'string'
-summary: records=1 calls=1 errors=2 warnings=0
+  ERROR   ARGUMENTS_SCHEMA_MISMATCH record 1 $.output[0].arguments["units"] (call 1) — value is not one of the allowed enum values
+summary: records=1 calls=1 errors=3 warnings=0
 ```
 
 ## The useful workflow
