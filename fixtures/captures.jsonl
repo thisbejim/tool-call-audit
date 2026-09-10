@@ -1,0 +1,2 @@
+{"response":{"choices":[{"message":{"tool_calls":[{"id":"c1","type":"function","function":{"name":"get_weather","arguments":"{\"city\":\"Hobart\",\"units\":\"celsius\"}"}}]}}]}}
+{"response":{"choices":[{"message":{"tool_calls":[{"id":"c2","type":"function","function":{"name":"get_weather","arguments":"{\"city\":12}"}}]}}]}}

@@ -1,0 +1,28 @@
+{
+  "tools": [
+    {
+      "type": "function",
+      "name": "get_weather",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "city": {"type": "string"},
+          "units": {"type": "string", "enum": ["celsius", "fahrenheit"]}
+        },
+        "required": ["city", "units"],
+        "additionalProperties": false
+      }
+    }
+  ],
+  "response": {
+    "id": "resp_fixture_broken",
+    "output": [
+      {
+        "type": "function_call",
+        "id": "fc_2",
+        "name": "get_weather",
+        "arguments": "{\"city\":17,\"units\":\"kelvin\"}"
+      }
+    ]
+  }
+}

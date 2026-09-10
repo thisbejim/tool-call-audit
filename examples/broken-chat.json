@@ -1,0 +1,49 @@
+{
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "get_weather",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "city": {"type": "string"},
+            "units": {"type": "string", "enum": ["celsius", "fahrenheit"]}
+          },
+          "required": ["city", "units"],
+          "additionalProperties": false
+        }
+      }
+    }
+  ],
+  "response": {
+    "id": "chatcmpl_fixture_broken",
+    "choices": [
+      {
+        "index": 0,
+        "finish_reason": "tool_calls",
+        "message": {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "call_broken_1",
+              "type": "function",
+              "function": {
+                "name": "get_weather",
+                "arguments": "{\"city\":42,\"units\":\"kelvin\"}"
+              }
+            },
+            {
+              "id": "call_broken_2",
+              "type": "function",
+              "function": {
+                "name": "get_weather",
+                "arguments": "{\"city\":\"Sydney\""
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

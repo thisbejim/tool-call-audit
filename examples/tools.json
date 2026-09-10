@@ -1,0 +1,35 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "get_weather",
+      "description": "Look up weather for a city.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "city": {"type": "string"},
+          "units": {"type": "string", "enum": ["celsius", "fahrenheit"]}
+        },
+        "required": ["city", "units"],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "send_email",
+      "description": "Send an email after approval.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "to": {"type": "string", "format": "email"},
+          "subject": {"type": "string"},
+          "body": {"type": "string"}
+        },
+        "required": ["to", "subject", "body"],
+        "additionalProperties": false
+      }
+    }
+  }
+]
